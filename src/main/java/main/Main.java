@@ -1,14 +1,26 @@
-/*----------------------------------------------------------------------------------------
- * Copyright (c) Microsoft Corporation. All rights reserved.
- * Licensed under the MIT License. See LICENSE in the project root for license information.
- *---------------------------------------------------------------------------------------*/
-
 package main;
 
-import frame.Frame;
+import GUI.Frame;
+import Player.InputManager;
 
 public class Main {
+    public static boolean running;
+    
     public static void main(String[] args) {
-         java.awt.EventQueue.invokeLater(() -> new Frame("Test"));
+        running = true;
+        java.awt.EventQueue.invokeLater(() -> new Frame("Sigma Ligma Game")); // Der Name war Niklas Idee
+        System.out.println("Debug:");
+        InputManager.KeyEvent(args);
+        //Update();
     }
+    /*
+    public static void Update() {
+        new Thread(new Runnable() {
+        @Override
+        public void run() {
+            // Game Tick Methode
+        }
+        }).start(); 
+    }
+    */
 }
